@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000101"
+    tools:context=".FullscreenActivity">
+
+    <com.google.ads.doubleclick.DfpAdView android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adUnitId="ca-app-pub-5357322922990776/1562312443"
+        ads:adSize="BANNER"
+        android:layout_alignParentBottom="true"
+        ads:loadAdOnCreate="true"/>
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:textSize="70sp"
+        android:gravity="center"
+        android:text="@string/dummy_content"
+        android:typeface="serif" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="left|top">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <EditText
+             android:layout_width="382dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:id="@+id/editText"
+             android:text="@string/dummy_button"
+             android:imeOptions="actionDone"
+             android:singleLine="true"
+             android:background="#000000"
+             android:textColor="#1affff"
+             android:layout_marginRight="69dp" />
+
+        </LinearLayout>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flash"
+            android:id="@+id/switch1"
+            android:background="#000000"
+            android:textColor="#1affff"
+            android:layout_marginRight="-29dp"
+            android:layout_gravity="left|top" />
+
+
+    </FrameLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:id="@+id/editText2"
+        android:text="@string/dummy_button"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:background="#000000"
+        android:textColor="#1affff"
+        android:layout_marginRight="-222dp"
+        android:layout_gravity="right|bottom" />
+
+</FrameLayout>
